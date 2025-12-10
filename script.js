@@ -35,7 +35,6 @@ searchButton.addEventListener('click', () => {
     if (location) {
        // console.error("SomethingWrong");
         fetchWeather(location);
-        setRandomBackground();
     }
     else{
         locationElement.textContent = "Please input a location";
@@ -50,6 +49,7 @@ function fetchWeather(location) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            setRandomBackground();
             locationElement.textContent = data.name;
             temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
             descriptionElement.textContent = data.weather[0].main;
