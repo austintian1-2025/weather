@@ -1,5 +1,6 @@
-const apiKey = '8cc6a29989b58458b5044b626dd92046';
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
+const apiKey = '003a04db4db142f479fa9aa76d92df10';
+const apiUrl = 'http://api.openweathermap.org/data/2.5/forecast';
+
 
 const locationInput = document.getElementById('locationInput');
 const searchButton = document.getElementById('searchButton');
@@ -15,7 +16,7 @@ searchButton.addEventListener('click', () => {
 });
 
 function fetchWeather(location) {
-    const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
+    const url = `${apiUrl}?id=524901&q=${location}&appid=${apiKey}&units=metric`;
 
     fetch(url)
         .then(response => response.json())
