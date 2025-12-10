@@ -35,7 +35,7 @@ searchButton.addEventListener('click', () => {
     if (location) {
         console.error("SomethingWrong");
         fetchWeather(location);
-       // setRandomBackground();
+        setRandomBackground();
     }
     else{
         locationElement.textContent = "Please input a location";
