@@ -34,7 +34,7 @@ function setRandomBackground() {
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
     if (location) {
-        
+        console.error("SomethingWrong");
         fetchWeather(location);
        // setRandomBackground();
     }
