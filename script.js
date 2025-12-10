@@ -17,7 +17,7 @@ searchButton.addEventListener('click', () => {
 
 function fetchWeather(location) {
     /*const url = `${apiUrl}?id=524901&q=${location}&appid=${apiKey}&units=metric`; */
-    const url = `${apiUrl1}q=${location}&appid=${apiKey}`;
+    const url = `${apiUrl1}q=${location}&appid=${apiKey}&units=metric`;
     
 
     fetch(url)
