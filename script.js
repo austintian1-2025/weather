@@ -36,7 +36,7 @@ searchButton.addEventListener('click', () => {
     if (location) {
         
         fetchWeather(location);
-        setRandomBackground();
+       // setRandomBackground();
     }
     else{
         locationElement.textContent = "Please input a location";
