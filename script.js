@@ -1,6 +1,6 @@
 const apiKey = '003a04db4db142f479fa9aa76d92df10';
-const apiUrl = 'http://api.openweathermap.org/data/2.5/forecast';
-const apiUrl1 ='https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=003a04db4db142f479fa9aa76d92df10'
+// const apiUrl = 'http://api.openweathermap.org/data/2.5/forecast';
+const apiUrl1 ='https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid='
 
 
 const locationInput = document.getElementById('locationInput');
@@ -18,7 +18,7 @@ searchButton.addEventListener('click', () => {
 
 function fetchWeather(location) {
     /*const url = `${apiUrl}?id=524901&q=${location}&appid=${apiKey}&units=metric`; */
-    const url = `${apiUrl1}`;
+    const url = `${apiUrl1}${apiKey}`;
     
 
     fetch(url)
