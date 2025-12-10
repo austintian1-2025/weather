@@ -16,7 +16,7 @@ const backgroundImages = [
     'test4.webp',
     'test5.webp',
     'test6.webp',
-    'test7.jpg',
+    'test7.jpg'
     // Add more image names as needed
 ];
 
