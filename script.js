@@ -8,7 +8,6 @@ const locationElement = document.getElementById('location');
 const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
 const weatherNowElement = document.getElementById('weathernow');
-
 const backgroundImages = [
     'test.png',
     'test2.jpg',
@@ -64,8 +63,8 @@ function fetchWeather(location) {
         .catch(error => {
             locationElement.textContent = "No Data Returned, Check Your Location";
             console.error('Error fetching weather data:', error);
-              temperatureElement.textContent = """";
-            descriptionElement.textContent = """";
+              temperatureElement.textContent = "";
+            descriptionElement.textContent = "";
             
             weatherNowElement.textContent = "";
                 
