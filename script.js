@@ -34,8 +34,9 @@ function setRandomBackground() {
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
     if (location) {
-        setRandomBackground();
+        
         fetchWeather(location);
+        setRandomBackground();
     }
     else{
         locationElement.textContent = "Please input a location";
