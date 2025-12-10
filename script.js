@@ -9,10 +9,36 @@ const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
 const weatherNowElement = document.getElementById('weathernow');
 
+const backgroundImages = [
+    'test.png',
+    'test2.jpg',
+    'test3.jpg',
+    'test4.webp',
+    'test5.webp',
+    'test6.webp',
+    'test7.jpg',
+    // Add more image names as needed
+];
+
+function setRandomBackground() {
+    // Generate a random index within the range of the backgroundImages array
+    const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+
+    // Get the randomly selected image file name
+    const selectedImage = backgroundImages[randomIndex];
+
+    // Update the background image of the body element
+    document.body.style.backgroundImage = `url('${selectedImage}')`;
+}
+
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
     if (location) {
+        setRandomBackground();
         fetchWeather(location);
+    }
+    else{
+        locationElement.textContent = "Please input a location";
     }
 });
 
