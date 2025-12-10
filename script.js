@@ -25,7 +25,7 @@ function setRandomBackground() {
 
     // Get the randomly selected image file name
     const selectedImage = backgroundImages[randomIndex];
-
+console.error(selectedImage);
     // Update the background image of the body element
     document.body.style.backgroundImage = `url('${selectedImage}')`;
 }
@@ -33,7 +33,7 @@ function setRandomBackground() {
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
     if (location) {
-        console.error("SomethingWrong");
+       // console.error("SomethingWrong");
         fetchWeather(location);
         setRandomBackground();
     }
